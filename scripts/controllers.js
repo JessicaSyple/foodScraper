@@ -3,7 +3,4 @@
  */
 angular.module('foodscrApp')
 
-    .controller('ResultsCtrl', function(){
-
-
-    });
+    .controller('ResultsCtrl', function(){});
