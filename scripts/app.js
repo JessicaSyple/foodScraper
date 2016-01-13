@@ -1,6 +1,1 @@
-(function(){
-    var app = angular.module('foodscrApp', []);
-
-
-
-})();
+var app = angular.module('app', []);
