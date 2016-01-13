@@ -1,0 +1,56 @@
+body {
+
+}
+
+.content {
+    width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #008eb6;
+}
+
+h3 {
+    text-align: center;
+}
+
+fieldset {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input {
+    width: 300px;
+    position: relative;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+form {
+    padding: 30px;
+}
+
+.recipeList {
+    padding: 10px;
+}
+
+.list-group-item {
+    padding: 20px 60px;
+}
+
+.list-group-item ul, p {
+    display: inline-block;
+}
+
+.list-group-item li {
+    margin-left: 20px;
+}
+
+.img-thumbnail {
+    width: 125px;
+    height: 125px;
+    display: inline-block;
+}

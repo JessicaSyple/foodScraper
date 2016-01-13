@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript" src="lib/angular.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+
+    <title>FoodscrApp</title>
+</head>
+<body>
+    <header>
+        <h1>FoodscrApp</h1>
+    </header>
+    <div class="content">
+
+        <!-- Ingredients Search -->
+        <div class="searchBox">
+            <form name="searchForm">
+                <h3>What's In Your Fridge?</h3>
+                <fieldset class="form-group">
+                    <input placeholder="Enter an ingredient..." title="Ingredient"></input>
+                </fieldset>
+                <fieldset class="form-group" >
+                    <input type="submit" class="btn btn-info" value="Search FoodscrApp" />
+                </fieldset>
+            </form>
+        </div>
+
+        <!-- Recipe Results -->
+        <div class="recipeList" ng-controller="ResultsCtrl">
+            <div class="list-group-item">
+                <h4>Recipe Name: <a href="google.com">blah</a></h4>
+                <a href="google.com"><img class="img-thumbnail" src="images/yuttarigreen.png"></a>
+                <ul>
+                <h5>Ingredients List</h5>
+                    <li>Banana</li>
+                    <li>Sugar</li>
+                    <li>Apple</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
