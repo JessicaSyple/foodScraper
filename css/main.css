@@ -16,6 +16,10 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    margin-top: 0px;
+}
+
 fieldset {
     display: block;
     margin: 0 auto;
@@ -38,11 +42,17 @@ form {
 }
 
 .list-group-item {
-    padding: 20px 60px;
+    padding: 30px 60px;
+    margin: 20px;
+    background-color: rgba(0, 125, 154, 0.35);
+    border-color: rgba(0, 125, 154, 0.45);
+
 }
+
 
 .list-group-item ul, p {
     display: inline-block;
+    width: 450px;
 }
 
 .list-group-item li {

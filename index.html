@@ -28,14 +28,16 @@
 
         <!-- Recipe Results -->
         <div class="recipeList" ng-controller="ResultsCtrl">
-            <div class="list-group-item">
-                <h4>Recipe Name: <a href="google.com">blah</a></h4>
-                <a href="google.com"><img class="img-thumbnail" src="images/yuttarigreen.png"></a>
+            <div class="list-group-item" ng-repeat="recipe in recipes">
+                <h4>
+                    <a href="{{recipe.href}}">{{recipe.title}}</a>
+                </h4>
+                <a href="{{recipe.href}}">
+                    <img class="img-thumbnail" ng-src="{{recipe.thumbnail}}">
+                </a>
                 <ul>
-                <h5>Ingredients List</h5>
-                    <li>Banana</li>
-                    <li>Sugar</li>
-                    <li>Apple</li>
+                    <h5>Ingredients List</h5>
+                    <li>{{recipe.ingredients}}</li>
                 </ul>
             </div>
         </div>

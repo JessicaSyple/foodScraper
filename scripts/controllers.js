@@ -6,12 +6,13 @@ angular.module('app')
     .controller('ResultsCtrl', function($scope, recipeAPI){
 
         var page = 1;
-        var uniqueIngredients = {};
+        $scope.uniqueIngredients = {};
+        $scope.recipes = [];
 
 
         //unique function
         function checkUnique(ingredient){
-            return !uniqueIngredients[ingredient];
+            return !$scope.uniqueIngredients[ingredient];
         }
 
         //make function
@@ -32,7 +33,7 @@ angular.module('app')
                     //check uniqueness
                     //if unique, push to ingredients array
                     if (checkUnique(tempArr[j])) {
-                        uniqueIngredients[tempArr[j]] = true;
+                        $scope.uniqueIngredients[tempArr[j]] = true;
                     }
                 }
             }
@@ -42,15 +43,19 @@ angular.module('app')
             recipeAPI.getIngredients(page)
                 .success(function (data) {
                     data = data.results;
-                    console.log(page, data)
+
+                    $scope.recipes = $scope.recipes.concat(data);
+
+                    console.log($scope.recipes)
+                    //console.log(page, data);
                     if (data.length != 0) {
                         getIngredients(data);
                         page++;
-                        readRecipes();
+                        //readRecipes();
                     }
                     else {
                         console.log('empty page', data);
-                        console.log(JSON.stringify(uniqueIngredients))
+                        console.log(JSON.stringify($scope.uniqueIngredients))
                     }
                 })
                 .error(function (e, status) {
